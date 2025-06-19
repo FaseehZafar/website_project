@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"
+    <head>
+        <title> Registeration Form</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="form.css">
+        
+ </head>
+ 
+<body>
+    
+   <section class="container">
+    <div class="logo">Sundialle.</div>
+    <header>Registeration Form</header>
+    <form action="#" class="form">
+        <div class="input-box">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter Full Name" required/>
+        </div>
+
+        <div class="input-box">
+            <label>Email Address</label>
+            <input type="email" placeholder="xyz123@gmail.com" required/>
+        </div>
+        
+        <div class="coloumn">
+        <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required/>
+        </div>
+
+        <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter Birth Date" required/>
+        </div>
+    </div>
+
+    <div class="gender-box">
+        <h3>Gender</h3>
+        <div class="gender-option">
+            <div class="gender">
+                <input type="radio" id="check-male" name="gender" checked/>
+                <label for="check-male">Male</label>
+            </div>
+
+            <div class="gender">
+                <input type="radio" id="check-female" name="gender" checked/>
+                <label for="check-female">Female</label>
+            </div>
+
+            <div class="gender">
+                <input type="radio" id="check-others" name="gender" checked/>
+                <label for="check-others">Prefer Not to Say</label>
+            </div>
+    </div>
+
+     <div class="input-box address">
+               
+                <div class="column">
+                    <div class="select-box">
+                <select>
+                    <option hidden>Country</option>
+                    <option>Pakistan</option>
+                    <option>Bangladesh</option>
+                    <option>India</option>
+                    <option>Nepal</option>
+                </select>
+                
+            </div>
+            <input type="text" placeholder="Enter House no."  required/>
+            <input type="text" placeholder="Enter Street no." required/>
+            <input type="text" placeholder="Enter your city" required/>
+        </div>
+        
+            <input type="number" placeholder="Enter postal code" required/>
+            <input type="text" placeholder="Any Instructions? (optional)" required/>
+    </div>  
+
+    <button>Submit</button>
+    </form>
+   </section>
+</body>
+</html>
