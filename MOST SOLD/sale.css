@@ -1,0 +1,294 @@
+/*Importing google font poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif ;
+}
+
+.section{
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav{
+    width: 80%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.navlinks{
+    display: flex;
+}
+header{
+    width: 100%;
+    height: 100vh ;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    margin: auto;
+
+}
+.header-image{
+width: 22rem;
+}
+.logo{
+    font-size: 1.7rem;
+    color: rgb(31,48,47);
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.navlinks li{
+    list-style: none;
+}
+
+.navlinks li a{
+    text-decoration:none;
+    margin-left: 2.5rem;
+    color: rgb(31,48,47);
+    font-size: 1rem;
+    letter-spacing: 0rem;
+    position: relative;
+
+}
+
+.header-heading{
+    font-size: 3rem;
+}
+
+.header-heading::before{
+    content: "-45% OFF ";
+    position: absolute;
+    top: 200px;
+    font-size: 2.5rem;
+    font-family: "Oswald", sans-serif;
+    color:brown;
+}
+.product-name{
+    font-size:1.7rem;
+}
+
+.header-pricing{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.primary-btn, .secondary-btn, .section-three-btn{
+    font-size: 1.1rem;
+    border:none;
+    padding: 1rem 1.7rem;
+    transition: transform .5s ease;
+    
+}
+.btn-container{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.primary-btn{
+    background: grey;
+}
+.secondary-btn{
+    background: rgb(31,48,47);
+    color: white;
+    transform: scale(1.1);
+}
+.section-three-btn:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.primary-btn:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.secondary-btn:hover{
+    transform: scale(1);
+}
+
+.navlinks li a::after{
+    content:"";
+    background:rgb(31,48,47);
+    position:absolute;
+    height: .15rem;
+    width: 100%;
+    left:0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+
+}
+.navlinks li a:hover::after{
+    transform: scaleX(1);
+
+}
+
+.line{
+    background: rgb(31,48,47);
+    width: 2.5rem;
+    height: .2rem;
+    margin:.38rem;
+}
+
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+/* Adjusting it for different media screens*/
+@media screen and (max-width: 500px) {
+    .header-image {
+        display:flex ;
+        width: 14rem;
+    } 
+   
+    .header-heading::before{
+        top: 9rem;
+    }
+    .navlinks{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        background-color: rgb(31,48,47);
+        width: 60%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        right: 100%;
+        z-index:2;
+        gap: 6rem;
+        transition: transform .5s ease-in-out;
+    }
+    
+    .navlinks-active{
+        right:0%;
+    }
+    .navlinks li a{
+        font-size: 1.3rem;
+        color: white;
+        margin-left: 37%;
+
+    }
+    .section .logo{
+        z-index: 5;
+    }
+    .hamburger{
+        display:block;
+        z-index: 5;
+    } 
+    .header-heading{
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        
+    }
+    .header{
+        justify-content: flex-start;
+    }
+    .card-image{
+        width: 17rem;
+    }
+    .primary-btn{
+        font-size: 0.75rem;
+    }
+    .secondary-btn{
+        font-size: 0.75rem;
+    }
+    .section-three-heading{
+        font-size: 2.8rem;
+    }
+    .section-three-offer{
+        font-size: 3.3rem;
+    }
+    .section-three-btn{
+        font-size: 1rem;
+    }
+}
+
+
+/*Section 2*/
+
+.section-heading{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 9rem;
+}
+.card-image{
+    width:13rem;
+}
+
+.card{
+    background:white;
+    padding: 2rem;
+}
+
+.card-pricing{
+    font-size: 1.2rem;
+    margin-top:.2rem;
+    margin-bottom: 1.2rem;
+}
+
+/*Section 3*/
+.section-three{
+    display: flex;
+    align-items: center;
+}
+
+.section-three-container{
+    background-image:  url("30.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    width: 100%;
+    height: 70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.section-three-offer{
+    font-size: 4rem;
+    color:peachpuff;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+.section-three-heading{
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.section-three-btn{
+    font-size: 1.1rem;
+    padding: 1rem 1.7rem;
+    background: peachpuff;
+    border: none;
+    transition: transform .5s ease;
+}
+.section-three-container::before{
+    content: "";
+    background: rgba(0,0,0,0.54);
+    position: absolute;
+    inset:0;
+}
+.section-three-container .content{
+    z-index: 5;
+}
